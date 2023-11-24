@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kurly/constants.dart';
-import 'package:flutter_kurly/screens/components/default_button.dart';
+import 'package:flutter_kurly/screens/signin/signin_screen.dart';
 import 'package:flutter_kurly/theme.dart';
 
 class MyKurlyHeader extends StatelessWidget {
@@ -35,7 +35,9 @@ class MyKurlyHeader extends StatelessWidget {
             ),
             const Spacer(),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, SignInScreen.routeName);
+              },
               child: Container(
                 width: double.infinity,
                 height: 50,
