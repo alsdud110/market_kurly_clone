@@ -15,12 +15,20 @@ class DefaultButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: color,
-          padding: const EdgeInsets.all(16),
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        width: double.infinity,
+        height: 50,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(5), color: kPrimaryColor),
+        child: Center(
+          child: Text(
+            text!,
+            style: const TextStyle(color: Colors.white, fontSize: 16),
+          ),
         ),
-        onPressed: press,
-        child: Text(text ?? "", style: textTheme().titleMedium));
+      ),
+    );
   }
 }
