@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kurly/models/product.dart';
+import 'package:flutter_kurly/models/product_details_arguments.dart';
+import 'package:flutter_kurly/screens/details/detail_screen.dart';
 import 'package:flutter_kurly/string_extensions.dart';
 import 'package:flutter_kurly/theme.dart';
 
@@ -19,7 +21,13 @@ class ProductItem extends StatelessWidget {
       children: [
         Expanded(
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(
+                context,
+                DetailScreen.routeName,
+                arguments: ProductDetailsArguments(product: product),
+              );
+            },
             child: Image.network(
               product.imageUrl ?? "assets/images/kurly_banner_0.jpg",
               fit: BoxFit.cover,

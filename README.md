@@ -98,7 +98,7 @@ Positioned() 는 아래 이미지 순번 을 보여주는거임
             SliverList(
                 deletegate: SliverChildListDelegate(
                     [
-
+                        PopupMenuButton같은거
                     ],
                 ),
             ),
@@ -115,3 +115,19 @@ Positioned() 는 아래 이미지 순번 을 보여주는거임
             ),
         ],
     )
+
+7. DetailScreen
+    arguments 타입이 객체타입이여야 하니까 받을 수 있게 ProductDetailArguments 를 하나 만들어 (Product 객체만 받는 객체)
+
+    (1) 보낼 때는 아래처럼 하면 됨
+    Navigator.pushNamed(
+                context,
+                DetailScreen.routeName,
+                arguments: ProductDetailsArguments(product: product),
+    );
+
+    (2) 받을 때는
+        final arguments = ModalRoute.of(context)!.settings.arguments as ProductDetailArguments;
+
+    사용할 때는 arguments.product 면 됨
+
