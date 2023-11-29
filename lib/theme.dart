@@ -9,6 +9,7 @@ ThemeData theme() {
       centerTitle: true,
       color: kPrimaryColor,
       elevation: 0.0,
+      foregroundColor: Colors.white,
     ),
     primaryColor: kPrimaryColor,
     textSelectionTheme:
