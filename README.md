@@ -91,3 +91,27 @@ Positioned() 는 아래 이미지 순번 을 보여주는거임
     onRefresh: () async {
         await Future.delayed(Duration(milliseconds: 1000));
     }
+
+6. CustomScrollView 여러개의 리스트뷰를 하나의 화면에 표현할 때 사용
+    CustomScrollView(
+        slivers: [
+            SliverList(
+                deletegate: SliverChildListDelegate(
+                    [
+
+                    ],
+                ),
+            ),
+            SliverGrid( //그리드 뷰
+                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                    아래 delegate에 넣는 위젯의 각격, 비율 등을 조정
+                ),
+                delegate: SliverChildBuilderDelegate(
+                    (context, index) {
+                        return 위젯
+                    }
+                ),
+                childCount: 위젯의 개수
+            ),
+        ],
+    )

@@ -21,17 +21,18 @@ class NewProductPage extends StatelessWidget {
             },
           ),
           // 2
-          const SliverAppBar(
-            elevation: 0.0,
-            automaticallyImplyLeading: false,
-            backgroundColor: Colors.white,
-            titleSpacing: 0,
-            actions: [
-              SizedBox(
-                width: 100,
-                child: ProductFilterButton(),
-              )
-            ],
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                const Align(
+                  alignment: Alignment.bottomRight,
+                  child: SizedBox(
+                    width: 100,
+                    child: ProductFilterButton(),
+                  ),
+                ),
+              ],
+            ),
           ),
           // 3
           SliverGrid(
