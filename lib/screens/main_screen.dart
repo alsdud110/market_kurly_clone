@@ -24,12 +24,12 @@ class _MainScreensState extends State<MainScreens> {
     return Scaffold(
       body: IndexedStack(
         index: selectedIndex,
-        children: const [
-          HomeScreen(),
-          RecommendScreen(),
-          CategoryScreen(),
+        children: [
+          const HomeScreen(),
+          const RecommendScreen(),
+          const CategoryScreen(),
           SearchScreen(),
-          MyKurlyScreen()
+          const MyKurlyScreen()
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
