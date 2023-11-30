@@ -68,11 +68,12 @@ class CategoryScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 16, right: 16, bottom: 40),
             sliver: SliverGrid(
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                // 4
-                maxCrossAxisExtent: 200.0,
-                mainAxisSpacing: 16,
-                crossAxisSpacing: 10,
-                childAspectRatio: 1,
+                maxCrossAxisExtent:
+                    200.0, // 작아지면 한 줄에 보여주는 위젯 개수가 많아짐, 커지면 반대로 적어지고 (하나씩)
+                mainAxisSpacing: 16, // 아래 위젯 줄과의 간격
+                crossAxisSpacing: 10, // 옆 위젯과의 간격
+                childAspectRatio:
+                    1, // 위젯의 비율.. 1을 정사각형, 즉, width/height --> 1보다 작아지면 height 가 커진거고, 1보다 커지면 width자 커지는거임
               ),
               delegate: SliverChildBuilderDelegate(
                 (BuildContext context, int index) {
