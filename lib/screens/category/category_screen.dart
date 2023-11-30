@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kurly/constants.dart';
+import 'package:flutter_kurly/models/grid_category_menu.dart';
 import 'package:flutter_kurly/models/list_category_menu.dart';
 import 'package:flutter_kurly/screens/category/components/extends_icon_text_card.dart';
+import 'package:flutter_kurly/screens/category/components/image_text_card.dart';
 import 'package:flutter_kurly/screens/components/custom_action.dart';
 import 'package:flutter_kurly/screens/components/text_menu_card.dart';
 
@@ -60,6 +62,24 @@ class CategoryScreen extends StatelessWidget {
               color: Colors.grey[200],
               height: 12,
               thickness: 12,
+            ),
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.only(left: 16, right: 16, bottom: 40),
+            sliver: SliverGrid(
+              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                // 4
+                maxCrossAxisExtent: 200.0,
+                mainAxisSpacing: 16,
+                crossAxisSpacing: 10,
+                childAspectRatio: 1,
+              ),
+              delegate: SliverChildBuilderDelegate(
+                (BuildContext context, int index) {
+                  return ImageTextCard(menu: gridCategoryMenuList[index]);
+                },
+                childCount: gridCategoryMenuList.length,
+              ),
             ),
           ),
         ],
