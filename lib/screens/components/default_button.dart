@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kurly/constants.dart';
-import 'package:flutter_kurly/theme.dart';
 
 class DefaultButton extends StatelessWidget {
   final String? text;

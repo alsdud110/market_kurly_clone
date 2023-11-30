@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_kurly/constants.dart';
-import 'package:flutter_kurly/models/product.dart';
 import 'package:flutter_kurly/models/product_details_arguments.dart';
 import 'package:flutter_kurly/screens/components/default_button.dart';
 import 'package:flutter_kurly/screens/details/components/body.dart';

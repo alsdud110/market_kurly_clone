@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_kurly/constants.dart';
 import 'package:flutter_kurly/models/product.dart';
 import 'package:flutter_kurly/string_extensions.dart';
-import 'package:flutter_kurly/theme.dart';
 
 class Body extends StatelessWidget {
   final Product product;
